@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/main.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="img-container">
+            <img src="./images/dish-pic.jpg" alt="">
+        </div>
+        <div class="header-text">
+            <h2>Interactive Ingredient Checklist</h2>
+            <p>Here, you can easily customize your favorite recipe by freely adding, removing, and checking items in the checklist. Press the cross buttons to add or delete items, and press the existing item names to check or uncheck. Enjoy!</p>
+        </div>
+    </div>
+    <div class="content">
+        <ul id="item-list">
+            <li class="item">
+                <p class="item-text">
+                    <span class="text" job="cross-out">Salt</span>
+                    <span class="circle" job="delete">
+                        <span class="before"></span>
+                        <span class="after"></span>
+                    </span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="recipes">
+        <h2>Recommanded Recipes</h2>
+        <button class="accordion">Spaghetti & Meatballs</button>
+        <div class="panel">
+            <ul>
+                <li>1 lb. spaghetti</li>
+                <li>1 lb. ground beef</li>
+                <li>1/4 c. freshly grated Parmesan, plus more for serving</li>
+                <li>1/2 c. onion, finely chopped</li>
+                <li>1 can crushed tomatoes</li>
+                <li>2 tbsp. extra-virgin olive oil</li>
+            </ul>
+        </div>
+        <button class="accordion">Caeser Salad</button>
+        <div class="panel">
+            <ul>
+                <li>1 large or 2 small heads of romaine lettuce</li>
+                <li>Parmesan cheese, shredded or shaved</li>
+                <li>Crisp croutons</li>
+                <li>Caesar salad dressing</li>
+            </ul>
+        </div>
+        <button class="accordion">Creamy Mushroom Soup</button>
+        <div class="panel">
+            <ul>
+                <li>2 pounds sliced fresh mushrooms</li>
+                <li>1 yellow onion, diced</li>
+                <li>1 ½ tablespoons all-purpose flour</li>
+                <li>6 sprigs fresh thyme</li>
+                <li>1 cup heavy whipping cream</li>
+                <li>4 cups chicken broth</li>
+            </ul>
+        </div>
+    </div>
+    <div id="chart"></div>
+    <div class="add-item">
+        <p class="add-item-container">
+            <span class="add-icon" onclick="clickToAdd()">
+                <span class="hor"></span>
+                <span class="ver"></span>
+            </span>
+            <span><input type="text" id="input" placeholder="Add New Items"></span>
+        </p>
+    </div>
+
+</body>
+</html>

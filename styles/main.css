@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px
+}
+
+.header img {
+    width: 100%;
+}
+
+.header-text {
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+
+#item-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.item-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 34px;
+    border-bottom: 2px solid #CFCFCF;
+    border-top: 2px solid #CFCFCF;
+    margin: 0;
+}
+
+.item-text span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text, .circle {
+    margin: 2% 6% 2% 6%;
+}
+
+.crossed {
+    text-decoration: line-through;
+    color: #CFCFCF;
+}
+
+.circle {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 2;
+}
+.before,
+.after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 2px;
+    background-color: black;
+    border-radius: 0;
+    top: 27px;
+    -webkit-transition: 150ms ease-out;
+    -moz-transition: 150ms ease-out;
+    -o-transition: 150ms ease-out;
+    transition: 150ms ease-out;
+    z-index: 0;
+}
+.before {
+    left: 7px;
+}
+.after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: 7px;
+}
+.circle:hover {
+    border: 1px solid #717171;
+    padding-bottom: 1px;
+}
+.circle:hover .before {
+    -ms-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    transform: rotate(225deg);
+    -webkit-transition: 300ms ease-in-out all;
+    -moz-transition: 300ms ease-in-out all;
+    -o-transition: 300ms ease-in-out all;
+    transition: 300ms ease-in-out all;
+
+}
+.circle:hover .after {
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    -webkit-transition: 250ms ease-in all;
+    -moz-transition: 250ms ease-in all;
+    -o-transition: 250ms ease-in all;
+    transition: 250ms ease-in all;
+}
+
+.add-item {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #CFCFCF;
+    background-color: white;
+}
+
+.add-item-container span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#input {
+    height: 100%;
+    margin-left: 12%;
+    border: none;
+    padding: none;
+    font-size: 26px;
+    width: 85%;
+}
+
+.add-icon {
+    width: 56px;
+    height: 56px;
+    margin-left: 3%;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    z-index: 2;
+}
+.hor, .ver {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 2px;
+    background-color: black;
+    border-radius: 0;
+    top: 27px;
+    -webkit-transition: 150ms ease-out;
+    -moz-transition: 150ms ease-out;
+    -o-transition: 150ms ease-out;
+    transition: 150ms ease-out;
+    z-index: 0;
+}
+.hor {
+    left: 7px;
+}
+.ver {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: 7px;
+}
+.add-icon:hover {
+    background-color: black;
+    border-color: white;
+}
+.add-icon:hover .hor {
+    background-color: white;
+    -webkit-transition: 300ms ease-in-out all;
+    -moz-transition: 300ms ease-in-out all;
+    -o-transition: 300ms ease-in-out all;
+    transition: 300ms ease-in-out all;
+}
+.add-icon:hover .ver {
+    background-color: white;
+    -webkit-transition: 250ms ease-in all;
+    -moz-transition: 250ms ease-in all;
+    -o-transition: 250ms ease-in all;
+    transition: 250ms ease-in all;
+}
+
+.recipes {
+    margin-top: 80%;
+    text-align: center;
+}
+
+.recipes h2 {
+    display: inline-block;
+}
+
+.accordion {
+    width: 80%;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 20px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .img-container {
+        height: 300px;
+        width: 100%;
+    }
+
+    .img-container img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .header-text {
+        width: 60%;
+        margin-left: 20%;
+        text-align: center;
+    }
+
+    .header-text h2 {
+        font-size: 40px;
+    }
+
+    .header-text p {
+        font-size: 30px;
+        line-height: 2;
+    }
+
+    #item-list {
+        list-style-type: none;
+        padding: 0;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .item-text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 34px;
+        border: 2px solid #CFCFCF;
+        margin: 0;
+    }
+
+    .recipes {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 30%;
+        text-align: center;
+    }
+
+    .recipes h2 {
+        font-size: 40px;
+    }
+
+    .accordion {
+        width: 60%;
+        font-size: 25px;
+        transition: 0.4s;
+    }
+
+    #chart {
+        margin-left: 38%;
+    }
+}
